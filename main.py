@@ -25,6 +25,7 @@ for v1 in allAlphaNum:
     for v2 in allAlphaNum:
         for v3 in allAlphaNum:
             print(base + v1 + v2+v3)
+            driver.find_element(By.XPATH, "//input[@placeholder='Enter promo code']").clear()
             driver.find_element(By.XPATH, "//input[@placeholder='Enter promo code']").send_keys(base + v1 + v2+v3)
             driver.find_element(By.XPATH, "//button[text()='Apply']").click()
             time.sleep(2)
